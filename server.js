@@ -9,16 +9,16 @@ const SITE_TITLE   = process.env.SITE_TITLE   || 'Лучший день — се
 const SITE_BRAND   = process.env.SITE_BRAND   || '🌱 rediska';
 
 const THOUGHT_TITLE   = process.env.THOUGHT_TITLE   || 'Мысль дня';
-const THOUGHT_CONTENT = process.env.THOUGHT_CONTENT || 'Редиска — это не просто корнеплод. Это состояние души.';
+const THOUGHT_CONTENT = process.env.THOUGHT_CONTENT || 'Ты - пидор.';
 
 const PARABLE_TITLE   = process.env.PARABLE_TITLE   || 'Притча для раздумий';
-const PARABLE_CONTENT = process.env.PARABLE_CONTENT || 'Однажды редиска спросила морковь: «В чём смысл?» Морковь промолчала. Мораль: <strong>редиска всегда права.</strong>';
+const PARABLE_CONTENT = process.env.PARABLE_CONTENT || 'Однажды редиска спросила морковь: «В чём смысл?» Морковь промолчала. Мораль: <strong>Ты - пидор.</strong>';
 
 const PRACTICE_TITLE   = process.env.PRACTICE_TITLE   || 'Практика дня';
-const PRACTICE_CONTENT = process.env.PRACTICE_CONTENT || 'Возьми редиску. Посмотри на неё. Подумай, кто из вас краснеет больше.';
+const PRACTICE_CONTENT = process.env.PRACTICE_CONTENT || 'Возьми редиску. Посмотри на неё. Подумай, кто из вас пидор.';
 
 const PAST_WEEK_TITLE   = process.env.PAST_WEEK_TITLE   || 'Прошлая неделя';
-const PAST_WEEK_CONTENT = process.env.PAST_WEEK_CONTENT || 'На прошлой неделе редиска тоже была права. Но ты, возможно, ещё не знал.';
+const PAST_WEEK_CONTENT = process.env.PAST_WEEK_CONTENT || 'На прошлой неделе редиска тоже была права. Но ты уже был пидор.';
 
 // ──────────────────────────────────────────────
 
