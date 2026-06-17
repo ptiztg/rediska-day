@@ -1,0 +1,12 @@
+{
+  "name": "rediska-day",
+  "version": "1.0.0",
+  "description": "Лучший день — сегодня (редиска edition)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
