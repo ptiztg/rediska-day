@@ -195,49 +195,49 @@ const html = () => `<!DOCTYPE html>
   <p class="date">${getDateString()}</p>
 
   <div class="btn-row">
-    <button class="btn" onclick="open('thought')">${THOUGHT_TITLE}</button>
-    <button class="btn" onclick="open('parable')">${PARABLE_TITLE}</button>
-    <button class="btn" onclick="open('practice')">${PRACTICE_TITLE}</button>
+    <button class="btn" onclick="openModal('thought')">${THOUGHT_TITLE}</button>
+    <button class="btn" onclick="openModal('parable')">${PARABLE_TITLE}</button>
+    <button class="btn" onclick="openModal('practice')">${PRACTICE_TITLE}</button>
   </div>
 
   <div class="divider"></div>
 
   <div class="btn-row">
-    <button class="btn" onclick="open('pastweek')">${PAST_WEEK_TITLE}</button>
+    <button class="btn" onclick="openModal('pastweek')">${PAST_WEEK_TITLE}</button>
   </div>
 </div>
 
 <!-- Modals -->
-<div class="overlay" id="thought-modal" onclick="close('thought')">
+<div class="overlay" id="thought-modal" onclick="closeModal('thought')">
   <div class="modal" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="close('thought')">×</button>
+    <button class="close-btn" onclick="closeModal('thought')">×</button>
     <h2>${THOUGHT_TITLE}</h2>
     <p>${THOUGHT_CONTENT}</p>
     <div class="modal-footer">Июнь, ${new Date().getFullYear()}</div>
   </div>
 </div>
 
-<div class="overlay" id="parable-modal" onclick="close('parable')">
+<div class="overlay" id="parable-modal" onclick="closeModal('parable')">
   <div class="modal" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="close('parable')">×</button>
+    <button class="close-btn" onclick="closeModal('parable')">×</button>
     <h2>${PARABLE_TITLE}</h2>
     <p>${PARABLE_CONTENT}</p>
     <div class="modal-footer">Июнь, ${new Date().getFullYear()}</div>
   </div>
 </div>
 
-<div class="overlay" id="practice-modal" onclick="close('practice')">
+<div class="overlay" id="practice-modal" onclick="closeModal('practice')">
   <div class="modal" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="close('practice')">×</button>
+    <button class="close-btn" onclick="closeModal('practice')">×</button>
     <h2>${PRACTICE_TITLE}</h2>
     <p>${PRACTICE_CONTENT}</p>
     <div class="modal-footer">Июнь, ${new Date().getFullYear()}</div>
   </div>
 </div>
 
-<div class="overlay" id="pastweek-modal" onclick="close('pastweek')">
+<div class="overlay" id="pastweek-modal" onclick="closeModal('pastweek')">
   <div class="modal" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="close('pastweek')">×</button>
+    <button class="close-btn" onclick="closeModal('pastweek')">×</button>
     <h2>${PAST_WEEK_TITLE}</h2>
     <p>${PAST_WEEK_CONTENT}</p>
     <div class="modal-footer">Июнь, ${new Date().getFullYear()}</div>
@@ -278,17 +278,17 @@ const html = () => `<!DOCTYPE html>
   }
 
   // Modal control
-  function open(id) {
+  function openModal(id) {
     document.getElementById(id + '-modal').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-  function close(id) {
+  function closeModal(id) {
     document.getElementById(id + '-modal').classList.remove('open');
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      ['thought','parable','practice','pastweek'].forEach(close);
+      ['thought','parable','practice','pastweek'].forEach(closeModal);
     }
   });
 </script>
